@@ -1,8 +1,8 @@
 # 🧰 DigiTools Platform
 
-A modern React-based web application where users can explore digital tools, manage selections, and interact with a dynamic cart system.
+A modern React-based platform where users can explore digital tools, add them to a cart, and manage selections with a smooth and interactive experience.
 
-🔗 Repository: https://github.com/sagorteasc/PH-Assignment-05  
+🔗 Repository: https://github.com/sagorteasc/PH-Assignment-06  
 🔗 Live Demo: https://sagorteasc-digitools-platform.vercel.app/
 
 ---
@@ -26,6 +26,7 @@ A modern React-based web application where users can explore digital tools, mana
 - **JavaScript (ES6+)** – Application logic
 - **Tailwind CSS** – Styling
 - **React Toastify** – Notifications
+- **Vite** – Fast development build tool
 - **Vercel** – Deployment
 
 ---
