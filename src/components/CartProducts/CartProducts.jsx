@@ -2,7 +2,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import PropTypes from "prop-types";
 import CartProduct from "../CartProduct/CartProduct";
 
-const CartProducts = ({ addToCart, handleRemoveFromCart, totalCart }) => {
+const CartProducts = ({ addToCart, handleRemoveFromCart, totalCart, handleProceedButton }) => {
 
     return (
         <div className="w-3/4 mx-auto mb-10 md:mb-15">
@@ -29,9 +29,18 @@ const CartProducts = ({ addToCart, handleRemoveFromCart, totalCart }) => {
                                 ></CartProduct>)
                             }
                         </div>
-                        <div className="flex justify-between items-center px-7 pb-7">
+
+                        <div className="flex justify-between items-center px-7 pb-5">
                             <h3 className="text-[#627382]">Total:</h3>
                             <p className="font-bold text-2xl">${totalCart}</p>
+                        </div>
+
+                        <div className="mx-4 mb-5">
+                            <button
+                                onClick={handleProceedButton}
+                                className="btn w-full font-semibold text-white rounded-full bg-linear-to-tl from-[#4F39F6] to-[#9514FA] shadow-none border-none">
+                                Proceed to Checkout
+                            </button>
                         </div>
                     </div>
 
@@ -43,7 +52,8 @@ const CartProducts = ({ addToCart, handleRemoveFromCart, totalCart }) => {
 CartProducts.propTypes = {
     addToCart: PropTypes.array.isRequired,
     handleRemoveFromCart: PropTypes.func.isRequired,
-    totalCart: PropTypes.number.isRequired
+    totalCart: PropTypes.number.isRequired,
+    handleProceedButton: PropTypes.func.isRequired
 }
 
 export default CartProducts;

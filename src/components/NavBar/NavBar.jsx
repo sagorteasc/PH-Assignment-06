@@ -54,7 +54,7 @@ const NavBar = ({ cartCounter }) => {
                             Login
                         </button>
                         <button
-                            className="btn font-semibold text-white rounded-full bg-linear-to-tl from-[#4F39F6] to-[#9514FA] shadow-none border-none btn-info">
+                            className="btn font-semibold text-white rounded-full bg-linear-to-tl from-[#4F39F6] to-[#9514FA] shadow-none border-none">
                             Get Started
                         </button>
                     </div>

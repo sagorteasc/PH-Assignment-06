@@ -22,8 +22,6 @@ function App() {
 
   // total cart calculation
   const totalCart = addToCart.reduce((acc, current) => acc + current.price, 0);
-  console.log(totalCart);
-
 
   // add to cart and cart counter
   const handleBuyNow = (product) => {
@@ -71,6 +69,14 @@ function App() {
     setAddToCart(newCartData);
   }
 
+  // proceed button
+  const handleProceedButton = () => {
+    setAddToCart([]);
+    setBtnClicked([]);
+    setCartCounter(0);
+    alert("Congratulations!!");
+  }
+
   return (
     <>
       <div className="max-w-400 mx-auto">
@@ -109,6 +115,7 @@ function App() {
               addToCart={addToCart}
               handleRemoveFromCart={handleRemoveFromCart}
               totalCart={totalCart}
+              handleProceedButton={handleProceedButton}
             ></CartProducts>
         }
       </div>
