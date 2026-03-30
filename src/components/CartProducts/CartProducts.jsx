@@ -2,7 +2,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import PropTypes from "prop-types";
 import CartProduct from "../CartProduct/CartProduct";
 
-const CartProducts = ({ addToCart }) => {
+const CartProducts = ({ addToCart, handleRemoveFromCart }) => {
 
     return (
         <div className="w-3/4 mx-auto mb-10 md:mb-15">
@@ -18,13 +18,14 @@ const CartProducts = ({ addToCart }) => {
                         </div>
                     </div>
                     :
-                    <div className="card bg-base-100 w-full shadow-sm">
-                        <div className="p-3">
+                    <div className="card bg-base-100 w-full drop-shadow-xl shadow-sm">
+                        <div className="card-body">
                             <h3 className="font-bold text-2xl mb-5">Your Cart</h3>
                             {
                                 addToCart.map(product => <CartProduct
                                     key={product.id}
                                     product={product}
+                                    handleRemoveFromCart={handleRemoveFromCart}
                                 ></CartProduct>)
                             }
                         </div>
@@ -36,7 +37,8 @@ const CartProducts = ({ addToCart }) => {
 };
 
 CartProducts.propTypes = {
-    addToCart: PropTypes.object.isRequired
+    addToCart: PropTypes.object.isRequired,
+    handleRemoveFromCart: PropTypes.func.isRequired
 }
 
 export default CartProducts;

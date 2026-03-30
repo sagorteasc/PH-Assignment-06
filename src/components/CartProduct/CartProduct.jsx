@@ -1,10 +1,11 @@
+import PropTypes from "prop-types"
 import DesignToolImg from "../../assets/products/design-tool.png"
 import OperationImg from "../../assets/products/operation.png"
 import PortfolioImg from "../../assets/products/portfolio.png"
 import SocialMediaImg from "../../assets/products/social-media.png"
 import WritingImg from "../../assets/products/writing_2327400 1.png"
 
-const CartProduct = ({ product }) => {
+const CartProduct = ({ product, handleRemoveFromCart }) => {
 
     const { name, price, icon } = product;
 
@@ -38,6 +39,7 @@ const CartProduct = ({ product }) => {
 
                     <div>
                         <button
+                            onClick={() => handleRemoveFromCart(product)}
                             className="text-[#FF3980] bg-transparent font-bold text-xs border-none shadow-none md:text-base md:btn">
                             Remove
                         </button>
@@ -46,9 +48,13 @@ const CartProduct = ({ product }) => {
                 </div>
             </div>
 
-
         </div >
     );
 };
+
+CartProduct.propTypes = {
+    product: PropTypes.object.isRequired,
+    handleRemoveFromCart: PropTypes.func.isRequired
+}
 
 export default CartProduct;

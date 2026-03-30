@@ -5,7 +5,7 @@ import PortfolioImg from "../../assets/products/portfolio.png"
 import SocialMediaImg from "../../assets/products/social-media.png"
 import WritingImg from "../../assets/products/writing_2327400 1.png"
 
-const Product = ({ digiTool, handleBuyNow, isClicked }) => {
+const Product = ({ digiTool, handleBuyNow, btnClicked }) => {
 
     const { id, tagType, icon, name, description, price, period, features } = digiTool
 
@@ -74,13 +74,13 @@ const Product = ({ digiTool, handleBuyNow, isClicked }) => {
                             onClick={() => handleBuyNow(digiTool)}
                             className=
                             {
-                                isClicked.includes(id) ?
+                                btnClicked.includes(id) ?
                                     "text-white bg-success btn btn-block btn-disabled font-bold border-none shadow-none rounded-full"
                                     : "text-white bg-linear-to-tl from-[#4F39F6] to-[#9514FA] btn btn-block font-bold border-none shadow-none rounded-full"
                             }
                         >
                             {
-                                isClicked.includes(id) ?
+                                btnClicked.includes(id) ?
                                     "Added To Cart!!"
                                     : "Buy Now"
                             }

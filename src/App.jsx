@@ -16,12 +16,13 @@ function App() {
   const [isActive, setIsActive] = useState({
     status: "product"
   })
-  const [isClicked, setIsClicked] = useState([]);
+  const [btnClicked, setBtnClicked] = useState([]);
   const [cartCounter, setCartCounter] = useState(0);
   const [addToCart, setAddToCart] = useState([]);
 
+  // add to cart and cart counter
   const handleBuyNow = (product) => {
-    setIsClicked(pricing => [...pricing, product.id]);
+    setBtnClicked(pricing => [...pricing, product.id]);
     setCartCounter(cartCounter + 1);
 
     const isExist = addToCart.find(p => p.id === product.id);
@@ -39,6 +40,7 @@ function App() {
     }
   }
 
+  // toggle category
   const handleCategory = (status) => {
     if (status === "product") {
       setIsActive({
@@ -50,6 +52,18 @@ function App() {
         status: "cart"
       })
     }
+  }
+
+  // remove from cart
+  const handleRemoveFromCart = (product) => {
+
+    setCartCounter(cartCounter - 1);
+
+    const updatedClicked = btnClicked.filter(id => id !== product.id);
+    setBtnClicked(updatedClicked)
+
+    const newCartData = addToCart.filter(p => p.id !== product.id);
+    setAddToCart(newCartData);
   }
 
   return (
@@ -78,7 +92,7 @@ function App() {
                 <Products
                   digiToolsPromise={digiToolsPromise}
                   handleBuyNow={handleBuyNow}
-                  isClicked={isClicked}
+                  btnClicked={btnClicked}
                   cartCounter={cartCounter}
                 ></Products>
               </Suspense>
@@ -88,6 +102,7 @@ function App() {
             :
             <CartProducts
               addToCart={addToCart}
+              handleRemoveFromCart={handleRemoveFromCart}
             ></CartProducts>
         }
       </div>

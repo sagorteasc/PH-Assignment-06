@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { use } from "react";
 import Product from "../Product/Product";
 
-const Products = ({ digiToolsPromise, handleBuyNow, isClicked }) => {
+const Products = ({ digiToolsPromise, handleBuyNow, btnClicked }) => {
 
     const digiTools = use(digiToolsPromise);
 
@@ -15,7 +15,7 @@ const Products = ({ digiToolsPromise, handleBuyNow, isClicked }) => {
                         key={digiTool.id}
                         digiTool={digiTool}
                         handleBuyNow={handleBuyNow}
-                        isClicked={isClicked}
+                        btnClicked={btnClicked}
                     ></Product>)
                 }
             </div>
@@ -26,7 +26,7 @@ const Products = ({ digiToolsPromise, handleBuyNow, isClicked }) => {
 Products.propTypes = {
     digiToolsPromise: PropTypes.instanceOf(Promise).isRequired,
     handleBuyNow: PropTypes.func.isRequired,
-    isClicked: PropTypes.array.isRequired,
+    btnClicked: PropTypes.array.isRequired,
     cartCounter: PropTypes.number.isRequired
 }
 
