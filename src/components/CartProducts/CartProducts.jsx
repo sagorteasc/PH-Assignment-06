@@ -2,7 +2,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import PropTypes from "prop-types";
 import CartProduct from "../CartProduct/CartProduct";
 
-const CartProducts = ({ addToCart, handleRemoveFromCart }) => {
+const CartProducts = ({ addToCart, handleRemoveFromCart, totalCart }) => {
 
     return (
         <div className="w-3/4 mx-auto mb-10 md:mb-15">
@@ -29,6 +29,10 @@ const CartProducts = ({ addToCart, handleRemoveFromCart }) => {
                                 ></CartProduct>)
                             }
                         </div>
+                        <div className="flex justify-between items-center px-7 pb-7">
+                            <h3 className="text-[#627382]">Total:</h3>
+                            <p className="font-bold text-2xl">${totalCart}</p>
+                        </div>
                     </div>
 
             }
@@ -37,8 +41,9 @@ const CartProducts = ({ addToCart, handleRemoveFromCart }) => {
 };
 
 CartProducts.propTypes = {
-    addToCart: PropTypes.object.isRequired,
-    handleRemoveFromCart: PropTypes.func.isRequired
+    addToCart: PropTypes.array.isRequired,
+    handleRemoveFromCart: PropTypes.func.isRequired,
+    totalCart: PropTypes.number.isRequired
 }
 
 export default CartProducts;

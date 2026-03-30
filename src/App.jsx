@@ -20,6 +20,11 @@ function App() {
   const [cartCounter, setCartCounter] = useState(0);
   const [addToCart, setAddToCart] = useState([]);
 
+  // total cart calculation
+  const totalCart = addToCart.reduce((acc, current) => acc + current.price, 0);
+  console.log(totalCart);
+
+
   // add to cart and cart counter
   const handleBuyNow = (product) => {
     setBtnClicked(pricing => [...pricing, product.id]);
@@ -103,6 +108,7 @@ function App() {
             <CartProducts
               addToCart={addToCart}
               handleRemoveFromCart={handleRemoveFromCart}
+              totalCart={totalCart}
             ></CartProducts>
         }
       </div>
