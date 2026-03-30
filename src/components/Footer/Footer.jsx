@@ -5,12 +5,13 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className="bg-[#101727]">
-            <footer className="footer text-white p-10 max-w-400 w-11/12 mx-auto md:w-4/5 lg:w-3/4">
-                <div className="flex flex-wrap justify-evenly">
+            <footer className="footer text-white p-7 max-w-400 w-full mx-auto md:px-10 md:w-4/5 lg:w-3/4">
+                <div className="flex flex-wrap gap-5 justify-evenly">
                     <aside className="text-center lg:text-start lg:w-1/3">
-                        <h3 className="font-bold text-3xl text-transparent bg-clip-text bg-linear-to-tl from-[#4F39F6] to-[#9514FA] mx-auto lg:mx-0">DigiTools</h3>
+                        <h3 className="font-bold text-3xl text-transparent bg-clip-text bg-linear-to-tl from-[#4F39F6] to-[#9514FA] mx-auto mb-2 lg:mx-0">DigiTools</h3>
                         <p className="opacity-80">Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.</p>
                     </aside>
+
                     <nav className="list-none">
                         <h6 className="font-medium text-xl">Product</h6>
                         <li className="opacity-80">Features</li>
@@ -18,6 +19,7 @@ const Footer = () => {
                         <li className="opacity-80">Templates</li>
                         <li className="opacity-80">Integrations</li>
                     </nav>
+
                     <nav className="list-none">
                         <h6 className="font-medium text-xl">Company</h6>
                         <li className="opacity-80">About</li>
@@ -25,6 +27,7 @@ const Footer = () => {
                         <li className="opacity-80">Careers</li>
                         <li className="opacity-80">Press</li>
                     </nav>
+
                     <nav className="list-none">
                         <h6 className="font-medium text-xl">Resources</h6>
                         <li className="opacity-80">Documentation</li>
@@ -34,7 +37,7 @@ const Footer = () => {
                     </nav>
 
                     <nav>
-                        <h6 className="font-medium text-xl">Social</h6>
+                        <h6 className="font-medium text-xl mb-2">Social</h6>
                         <div className="flex gap-2">
                             <FaInstagram />
                             <FaSquareFacebook />
