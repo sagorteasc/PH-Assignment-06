@@ -8,6 +8,7 @@ import Products from "./components/Products/Products"
 import Status from "./components/Status/Status"
 import CartProducts from "./components/CartProducts/CartProducts"
 import Category from "./components/Category/Category"
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
 
   const [isActive, setIsActive] = useState({
     status: "product"
-  })
+  });
   const [btnClicked, setBtnClicked] = useState([]);
   const [cartCounter, setCartCounter] = useState(0);
   const [addToCart, setAddToCart] = useState([]);
@@ -25,22 +26,22 @@ function App() {
 
   // add to cart and cart counter
   const handleBuyNow = (product) => {
-    setBtnClicked(pricing => [...pricing, product.id]);
-    setCartCounter(cartCounter + 1);
-
     const isExist = addToCart.find(p => p.id === product.id);
 
     if (isExist) {
-      alert("Plan Already in the Cart");
+      toast.error("Plan Already in the Cart");
       return;
     }
 
     else {
       const newCartList = [...addToCart, product];
-      alert("Plan Added to Cart");
+      toast.success("Plan Added to Cart");
 
       setAddToCart(newCartList);
+      setBtnClicked(pricing => [...pricing, product.id]);
+      setCartCounter(oldCount => oldCount + 1);
     }
+
   }
 
   // toggle category
@@ -60,13 +61,15 @@ function App() {
   // remove from cart
   const handleRemoveFromCart = (product) => {
 
-    setCartCounter(cartCounter - 1);
+    setCartCounter(oldCount => oldCount - 1);
+
 
     const updatedClicked = btnClicked.filter(id => id !== product.id);
-    setBtnClicked(updatedClicked)
+    setBtnClicked(updatedClicked);
 
     const newCartData = addToCart.filter(p => p.id !== product.id);
     setAddToCart(newCartData);
+    toast.warning("Plan Removed From Cart");
   }
 
   // proceed button
@@ -74,11 +77,12 @@ function App() {
     setAddToCart([]);
     setBtnClicked([]);
     setCartCounter(0);
-    alert("Congratulations!!");
+    toast.success("Congratulations!! Purchase Successful");
   }
 
   return (
     <>
+      <ToastContainer />
       <div className="max-w-400 mx-auto">
         <NavBar cartCounter={cartCounter}></NavBar>
         <Banner></Banner>

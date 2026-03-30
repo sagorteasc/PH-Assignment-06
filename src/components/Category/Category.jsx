@@ -39,7 +39,7 @@ const Category = ({ cartCounter, handleCategory, isActive }) => {
 Category.propTypes = {
     cartCounter: PropTypes.number.isRequired,
     handleCategory: PropTypes.func.isRequired,
-    isActive: PropTypes.bool.isRequired
+    isActive: PropTypes.object.isRequired
 }
 
 export default Category;

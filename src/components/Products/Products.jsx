@@ -27,7 +27,6 @@ Products.propTypes = {
     digiToolsPromise: PropTypes.instanceOf(Promise).isRequired,
     handleBuyNow: PropTypes.func.isRequired,
     btnClicked: PropTypes.array.isRequired,
-    cartCounter: PropTypes.number.isRequired
 }
 
 export default Products;

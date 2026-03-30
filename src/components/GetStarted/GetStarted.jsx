@@ -21,10 +21,10 @@ const GetStarted = () => {
                             </div>
                         </div>
 
-                        <figure className="px-10 pt-2 -mb-3">
+                        <figure className="bg-[#F9FAFC] rounded-full w-fit flex justify-center mx-auto -mb-3">
                             <img
                                 src={ProfileImg}
-                                className="bg-[#F9FAFC] rounded-full p-2" />
+                                className="w-16 h-16 object-contain p-2" />
                         </figure>
 
                         <div className="card-body text-center">
@@ -41,10 +41,10 @@ const GetStarted = () => {
                             </div>
                         </div>
 
-                        <figure className="px-10 pt-2 -mb-3">
+                        <figure className="bg-[#F9FAFC] rounded-full w-fit flex justify-center mx-auto -mb-3">
                             <img
                                 src={ProductImg}
-                                className="bg-[#F9FAFC] rounded-full p-2" />
+                                className="w-16 h-16 object-contain p-2" />
                         </figure>
 
                         <div className="card-body text-center">
@@ -62,10 +62,10 @@ const GetStarted = () => {
                         </div>
 
 
-                        <figure className="px-10 pt-2 -mb-3">
+                        <figure className="bg-[#F9FAFC] rounded-full w-fit flex justify-center mx-auto -mb-3">
                             <img
                                 src={RocketImg}
-                                className="bg-[#F9FAFC] rounded-full  p-2" />
+                                className="w-16 h-16 object-contain p-2" />
                         </figure>
 
                         <div className="card-body text-center">

@@ -7,7 +7,7 @@ import WritingImg from "../../assets/products/writing_2327400 1.png"
 
 const Product = ({ digiTool, handleBuyNow, btnClicked }) => {
 
-    const { id, tagType, icon, name, description, price, period, features } = digiTool
+    const { id, tagType, icon, name, description, price, period, features } = digiTool;
 
     return (
         <div>
