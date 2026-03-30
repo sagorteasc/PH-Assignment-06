@@ -1,10 +1,10 @@
 const Pricing = () => {
     return (
-        <div className="w-3/4 mx-auto mb-10 md:mb-15">
+        <div className="w-3/4 mx-auto mb-10 md:w-11/12 md:mb-15 lg:w-3/4">
 
-            <div className="hidden gap-7 md:flex">
+            <div className="hidden gap-7 mx-auto md:flex md:justify-evenly md:flex-wrap lg:flex-nowrap">
 
-                <div className="bg-[#F2F2F2] h-110 rounded-2xl drop-shadow-2xl shadow-md flex md:w-80">
+                <div className="bg-[#F2F2F2] h-110 rounded-2xl drop-shadow-2xl shadow-md flex md:w-76">
                     <div className="card-body">
                         <div className="flex flex-col">
                             <h2 className="text-2xl font-bold">Starter</h2>
@@ -36,7 +36,7 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                <div className="bg-linear-to-tl from-[#4F39F6] to-[#9514FA] text-white h-110 rounded-2xl drop-shadow-2xl shadow-md relative flex md:w-80">
+                <div className="bg-linear-to-tl from-[#4F39F6] to-[#9514FA] text-white h-110 rounded-2xl drop-shadow-2xl shadow-md relative flex md:w-76">
                     <div className="card-body">
                         <span className="bg-[#FEF3C6] text-[#BB4D00] badge badge-xs font-medium py-2 rounded-full absolute -top-2 left-1/2 -translate-x-1/2">Most Popular</span>
                         <div className="flex flex-col">
@@ -77,7 +77,7 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                <div className="bg-[#F2F2F2] h-110 rounded-2xl drop-shadow-2xl shadow-md flex md:w-80">
+                <div className="bg-[#F2F2F2] h-110 rounded-2xl drop-shadow-2xl shadow-md flex md:w-76">
                     <div className="card-body">
                         <div className="flex flex-col">
                             <h2 className="text-2xl font-bold">Enterprise</h2>

@@ -1,0 +1,120 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Plan",
+    "description": "Basic tools for individuals getting started.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic customization", "Export to PDF"],
+    "icon": "design-tool"
+  },
+  {
+    "id": 2,
+    "name": "Pro Plan",
+    "description": "Advanced features for professionals.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Priority support"],
+    "icon": "operation"
+  },
+  {
+    "id": 3,
+    "name": "Business Plan",
+    "description": "Perfect for teams and businesses.",
+    "price": 99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Unlimited templates",
+      "Team collaboration",
+      "Analytics dashboard"
+    ],
+    "icon": "operation"
+  },
+  {
+    "id": 4,
+    "name": "One-Time Basic",
+    "description": "Single purchase for basic access.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["20+ templates", "Lifetime access", "Export to PDF"],
+    "icon": "design-tool"
+  },
+  {
+    "id": 5,
+    "name": "Premium Yearly",
+    "description": "Save more with yearly subscription.",
+    "price": 199,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["200+ templates", "Advanced analytics", "Priority support"],
+    "icon": "portfolio"
+  },
+  {
+    "id": 6,
+    "name": "Student Plan",
+    "description": "Affordable plan for students.",
+    "price": 5,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["50+ templates", "Basic ATS optimization", "Email support"],
+    "icon": "writing"
+  },
+  {
+    "id": 7,
+    "name": "Enterprise Plan",
+    "description": "Full-scale solution for enterprises.",
+    "price": 499,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Unlimited templates",
+      "Dedicated manager",
+      "Custom integrations"
+    ],
+    "icon": "operation"
+  },
+  {
+    "id": 8,
+    "name": "Freelancer Pack",
+    "description": "Tools tailored for freelancers.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["80+ templates", "Client export options", "Portfolio builder"],
+    "icon": "portfolio"
+  },
+  {
+    "id": 9,
+    "name": "Career Booster",
+    "description": "Boost your job search success.",
+    "price": 59,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Resume review", "ATS optimization", "LinkedIn tips"],
+    "icon": "social-media"
+  },
+  {
+    "id": 10,
+    "name": "Ultimate Plan",
+    "description": "All-in-one premium package.",
+    "price": 299,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Unlimited templates", "AI suggestions", "24/7 support"],
+    "icon": "operation"
+  }
+]
