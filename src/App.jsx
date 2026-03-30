@@ -1,4 +1,4 @@
-import { Suspense } from "react"
+import { Suspense, useState } from "react"
 import Banner from "./components/Banner/Banner"
 import Footer from "./components/Footer/Footer"
 import GetStarted from "./components/GetStarted/GetStarted"
@@ -11,10 +11,18 @@ function App() {
 
   const digiToolsPromise = fetch("/DigiTools.json").then(res => res.json());
 
+  const [isClicked, setIsClicked] = useState([]);
+  const [cartCounter, setCartCounter] = useState(0);
+
+  const handleBuyNow = (id) => {
+    setIsClicked(pricing => [...pricing, id]);
+    setCartCounter(cartCounter + 1);
+  }
+
   return (
     <>
       <div className="max-w-400 mx-auto">
-        <NavBar></NavBar>
+        <NavBar cartCounter={cartCounter}></NavBar>
         <Banner></Banner>
         <Status></Status>
 
@@ -23,7 +31,12 @@ function App() {
             <span className="loading loading-bars loading-lg"></span>
           </div>
         }>
-          <Products digiToolsPromise={digiToolsPromise}></Products>
+          <Products
+            digiToolsPromise={digiToolsPromise}
+            handleBuyNow={handleBuyNow}
+            isClicked={isClicked}
+            cartCounter={cartCounter}
+          ></Products>
         </Suspense>
 
         <GetStarted></GetStarted>
