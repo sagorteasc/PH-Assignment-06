@@ -71,7 +71,7 @@ const Product = ({ digiTool, handleBuyNow, isClicked }) => {
 
                     <div className="mt-6">
                         <button
-                            onClick={() => handleBuyNow(id)}
+                            onClick={() => handleBuyNow(digiTool)}
                             className=
                             {
                                 isClicked.includes(id) ?
@@ -95,7 +95,7 @@ const Product = ({ digiTool, handleBuyNow, isClicked }) => {
 Product.propTypes = {
     digiTool: PropTypes.object.isRequired,
     handleBuyNow: PropTypes.func.isRequired,
-    isClicked: PropTypes.array.isRequire
+    isClicked: PropTypes.array.isRequired
 }
 
 export default Product;
