@@ -22,11 +22,11 @@ const NavBar = ({ cartCounter }) => {
                             className="menu menu-sm dropdown-content bg-base-100 font-semibold rounded-box text-center z-1 mt-3 w-52 p-2 shadow">
                             {navList}
                             <button
-                                className="btn font-semibold rounded-full my-2">
+                                className="btn font-semibold rounded-full my-2 block md:hidden">
                                 Login
                             </button>
                             <button
-                                className="btn font-semibold text-white rounded-full bg-linear-to-tl from-[#4F39F6] to-[#9514FA] shadow-none border-none btn-info">
+                                className="btn font-semibold text-white rounded-full bg-linear-to-tl from-[#4F39F6] to-[#9514FA] shadow-none border-none btn-info block md:hidden">
                                 Get Started
                             </button>
                         </ul>
