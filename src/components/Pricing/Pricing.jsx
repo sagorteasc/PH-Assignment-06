@@ -2,6 +2,11 @@ const Pricing = () => {
     return (
         <div className="w-3/4 mx-auto mb-10 md:w-11/12 md:mb-15 lg:w-3/4">
 
+            <div className="text-center mb-10">
+                <h3 className="font-bold text-2xl mb-2 md:text-5xl">Simple, Transparent Pricing</h3>
+                <p className="text-[#627382]">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+            </div>
+
             <div className="hidden gap-7 mx-auto md:flex md:justify-evenly md:flex-wrap lg:flex-nowrap">
 
                 <div className="bg-[#F2F2F2] h-110 rounded-2xl drop-shadow-2xl shadow-md flex md:w-76">
