@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className="bg-[#101727]">
             <footer className="footer text-white p-7 max-w-400 w-full mx-auto md:px-10 md:w-4/5 lg:w-3/4">
-                <div className="flex flex-wrap gap-5 justify-evenly">
+                <div className="flex flex-wrap gap-5 justify-evenly mx-auto">
                     <aside className="text-center lg:text-start lg:w-1/3">
                         <h3 className="font-bold text-3xl text-transparent bg-clip-text bg-linear-to-tl from-[#4F39F6] to-[#9514FA] mx-auto mb-2 lg:mx-0">DigiTools</h3>
                         <p className="opacity-80">Premium digital tools for creators, professionals, and businesses. Work smarter with our suite of powerful tools.</p>
@@ -46,9 +46,9 @@ const Footer = () => {
                     </nav>
                 </div>
 
-                <div className="flex justify-between w-full border-t border-gray-300 pt-5">
-                    <h4 className="text-[#FAFAFA] opacity-50">© 2026 Digitools. All rights reserved.</h4>
-                    <div className="flex flex-col gap-3 whitespace-nowrap ml-2 list-none md:ml-0 md:gap-5 md:flex-row md:justify-evenly">
+                <div className="flex flex-col gap-5 justify-between w-full border-t border-gray-300 pt-5 md:flex-row">
+                    <h4 className="text-[#FAFAFA] mx-auto opacity-50 md:mx-0">© 2026 Digitools. All rights reserved.</h4>
+                    <div className="flex justify-between mx-auto gap-5 whitespace-nowrap list-none md:mx-0">
                         <li className="text-[#FAFAFA] opacity-50">Privacy Policy</li>
                         <li className="text-[#FAFAFA] opacity-50">Terms of Service</li>
                         <li className="text-[#FAFAFA] opacity-50">Cookies</li>

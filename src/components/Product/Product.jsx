@@ -95,7 +95,7 @@ const Product = ({ digiTool, handleBuyNow, btnClicked }) => {
 Product.propTypes = {
     digiTool: PropTypes.object.isRequired,
     handleBuyNow: PropTypes.func.isRequired,
-    isClicked: PropTypes.array.isRequired
+    btnClicked: PropTypes.array.isRequired
 }
 
 export default Product;

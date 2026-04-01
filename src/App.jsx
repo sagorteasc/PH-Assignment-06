@@ -10,9 +10,9 @@ import CartProducts from "./components/CartProducts/CartProducts"
 import Category from "./components/Category/Category"
 import { ToastContainer, toast } from 'react-toastify';
 
-function App() {
+const digiToolsPromise = fetch("/DigiTools.json").then(res => res.json());
 
-  const digiToolsPromise = fetch("/DigiTools.json").then(res => res.json());
+function App() {
 
   const [isActive, setIsActive] = useState({
     status: "product"
